@@ -1,5 +1,11 @@
 const formulario = document.querySelector("#form");
 
+const dia = document.getElementById('dia')
+const data = new Date()
+dia.innerHTML = data.toLocaleString('pt-BR', { dateStyle: 'short' ,  timeStyle: 'short'})
+
+console.log('sim')
+
 formulario.addEventListener('submit', function (e) {
     e.preventDefault();
     const numeroEscolhido = document.querySelector('.numero').value;
@@ -43,18 +49,18 @@ formulario.addEventListener('submit', function (e) {
         if (numeroEscolhido <= 10) {
             return premios[9]
         }
-
     }
     const resultado = document.getElementById('resultado')
     resultado.innerHTML = "";
     const p = document.createElement('p');
-    
 
     p.innerHTML = Premios();
     resultado.appendChild(p);
-    
-
-   // console.log(Premios())
 });
+
+
+
+
+
 
 
