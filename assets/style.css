@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+SAS:wght@100..400&display=swap');
 
 :root {
-    --primary-color: rgba(173, 103, 214, 0.247);
-    --second-color: rgb(178, 55, 209);
+    --primary-color: rgba(68, 68, 68, 0.247);
+    --second-color: rgb(0, 0, 0);
 }
 
 
@@ -14,22 +14,22 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(62, 51, 122);
+    background-color: rgb(39, 39, 39);
     font-family: "Playfair Display", serif;
     font-size: 1.5em;
     line-height: 1.8em;
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 .container {
     max-width: 540px;
     margin: 50px auto;
-    background-image: radial-gradient(rgb(114, 5, 165), rgb(62, 51, 122));
+    background-image: radial-gradient(rgb(83, 83, 83), rgb(141, 139, 139));
     border-radius: 20px;
     padding: 20px;
     flex: 1;
-    margin: 0 10px;
     box-sizing: border-box;
     
 
@@ -62,29 +62,18 @@ form button:hover {
     background: var(--second-color);
 }
 
-
-.imagens {
-    
-    padding: auto;
-    flex: 1;
-    margin: 0 10px;
-    box-sizing: border-box;
-    
+.msg {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
 }
 
-.imgs {
-    width: 400px;
-    height: auto;
-    padding-left: 100px;
-}
+.msg:hover {
+      background: var(--second-color);
 
-.img {
-    width: 304px;
-    height: auto;
-    
-}
-
-.imagens :hover {
-    filter: blur(3px);
-    
 }

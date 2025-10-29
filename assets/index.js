@@ -2,18 +2,26 @@ const formulario = document.querySelector("#form");
 
 const dia = document.getElementById('dia')
 const data = new Date()
-dia.innerHTML = data.toLocaleString('pt-BR', { dateStyle: 'short' ,  timeStyle: 'short'})
+dia.innerHTML = data.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
 
-console.log('sim')
 
 formulario.addEventListener('submit', function (e) {
     e.preventDefault();
-    const numeroEscolhido = document.querySelector('.numero').value;
+    let numeroEscolhido = document.querySelector('.numero').value;
 
     function Premios() {
-        const premios = ["Eu te amo", "Voce e incrivel", "Voce é uma mulher muito forte", "Voce e minha garotinha",
-            "Voce e mais que capaz", "Saiba que eu tenho muito orgulho de voce meu amor", "Saiba que logo seremos nos dois para sempre",
-            "Saiba que Deus e conosco", "Eu sei que voce é uma mulher muito forte", "Voce e meu maior bem", "Eu agradeço a Deus todos os dias por ter vc em minha vida"
+        const premios = ["Eu te amo",
+            "Voce e incrivel",
+            "Voce é uma mulher muito forte",
+            "Voce e minha garotinha",
+            "Voce e mais que capaz",
+            "Saiba que eu tenho muito orgulho de voce meu amor",
+            "Saiba que logo seremos nos dois para sempre",
+            "Saiba que Deus e conosco",
+            "Eu sei que voce é uma mulher muito forte",
+            "Voce e meu maior bem",
+            "Eu agradeço a Deus todos os dias por ter vc em minha vida",
+
         ]
 
         if (numeroEscolhido <= 1) {
@@ -48,6 +56,8 @@ formulario.addEventListener('submit', function (e) {
         }
         if (numeroEscolhido <= 10) {
             return premios[9]
+        } else {
+            return "eu te amo"
         }
     }
     const resultado = document.getElementById('resultado')
@@ -56,7 +66,14 @@ formulario.addEventListener('submit', function (e) {
 
     p.innerHTML = Premios();
     resultado.appendChild(p);
+    document.querySelector('.numero').value = '';
 });
+
+function msgPersonalizada() {
+    window.location ="https://youtu.be/qwXzMp9w32w?si=Q6SMRZuIyIHwrDA6"
+}
+
+
 
 
 
